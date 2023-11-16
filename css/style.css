@@ -3,4 +3,130 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /*Forsiden: grid på hovedkomponentene header, main og footer:*/
+  /*CSS for mobil start*/
+  /*Slutt*/
+  /*CSS for desktop start*/
+  /*Slutt*/
+}
+body #grid-index {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "main" "footer";
+}
+body #grid-index header {
+  grid-area: header;
+}
+body #grid-index header #video {
+  /*Se kilde 3 i referanseliste*/
+  display: none;
+}
+body #grid-index main {
+  grid-area: main;
+}
+body #grid-index footer {
+  grid-area: footer;
+}
+@media only screen and (min-width: 700px) {
+  body #grid-index {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+  body #grid-index header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  body #grid-index header #video {
+    display: block;
+  }
+  body #grid-index header #image {
+    display: none;
+  }
+  body #grid-index main {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  body #grid-index footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
+
+/*Oppsett for headeren*/
+.header, body #grid-index header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.header nav, body #grid-index header nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.header nav span, body #grid-index header nav span {
+  display: flex;
+  justify-content: center;
+}
+.header nav ul, body #grid-index header nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header nav ul li, body #grid-index header nav ul li {
+  list-style: none;
+  font-size: 2rem;
+}
+.header nav ul li a, body #grid-index header nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.header #image, body #grid-index header #image {
+  /*Se kilde 3 i referanseliste*/
+  width: 100%;
+  position: absolute;
+  top: 350px;
+  z-index: -1;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover; /*Se kilde 4 i referanseliste*/
+  opacity: 0.5; /*Se kilde 5 i referanseliste*/
+}
+.header h1, body #grid-index header h1 {
+  padding: 2rem 3rem 2rem 3rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 1rem 0 0 0;
+  text-align: center;
+}
+.header p, body #grid-index header p {
+  font-size: 1.5rem;
+  padding: 0 2rem 1rem 2rem;
+  margin: 0;
+}
+.header .btn, body #grid-index header .btn {
+  text-decoration: none;
+}
+@media only screen and (min-width: 700px) {
+  .header nav, body #grid-index header nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.buttons, .header .btn, body #grid-index header .btn {
+  background-color: #e6bd43;
+  color: #000;
+  padding: 1rem;
+  font-weight: 800;
+}
+
 /*Se her for idé til videobakgrunn: https://stackoverflow.com/questions/54208390/html-css-video-as-background-for-the-header *//*# sourceMappingURL=style.css.map */

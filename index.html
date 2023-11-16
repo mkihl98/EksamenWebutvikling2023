@@ -21,22 +21,73 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="#">Portfolio</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a class="btn" href="#">Contact</a></li>
                     </ul>
                 </nav>
                 <!--Bakgrunnsvideo i header-området. Jeg lærte meg hvordan jeg legger inn autoplay muted videoer underveis i kursets obliger, og har brukt dette som inspirasjon her. Jeg valgte også å legge på loop, slik at videoen ikke stopper etter å ha spilt én gang. Kildene jeg brukte for å lære meg dette i obligen, var LMS-et til emnet, samt kilde nr. 1 i referanselisten-->
-                <video autoplay muted loop>
+                <video id="video" autoplay muted loop>
                     <source src="ressurser/mountains.mp4" type="video/mp4">
                     Your browser does not support the embedded video.
                 </video>
+                <img id="image" src="ressurser/header-640.jpg" alt=" ">
+                <!--Kilde til bildet (kilde 2 i referanselisten): Bildet er tatt av <a href="https://pixabay.com/no/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1841553">Pexels</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1841553">Pixabay</a>-->
                 <h1>Compelling headline</h1>
                 <p>The prospect of talking face-to-face with Sirius was all that sustained Harry over the next fortnight, the only bright spot on a horizon that had never looked darker</p>
-                <a href="#">Read more about our services</a>
+                <a class="btn" href="#">Read more about our services</a>
             </header>
             <main>
+                <section>
+                    <h2>Engaging subheading. What can you help your visitors with?</h2>
+                    <p>"Okay," said Harry slowly. "But. . . are you saying Karkaroff put my name in the goblet? Because if he did, he's a really good actor. He seemed furious about it. He wanted to stop me from competing."</p>
+                </section>
+                <section>
+                    <article>
+                        <img src="https://placehold.co/400x400" alt="Placeholder for bilde som representerer firmaet">
+                    </article>
+                    <article>
+                        <h2>About Our Company</h2>
+                        <p>"Not Slytherin, eh?" said the small voice. "Are you sure? You could be great, you know, it's all here in your head, and Slytherin will help you on the way to greatness, no doubt about that -- no? Well, if you're sure -- better be GRYFFINDOR!"</p>
+                        <a></a>
+                    </article>
+                </section>
+                <section>
+                    <h2></h2>
+                    <article>
+                        <h3>Branding</h3>
+                        <p>A ghost wearing a ruff and tights had suddenly noticed the first years.</p>
+                    </article>
+                    <article>
+                        <h3>Branding</h3>
+                        <p>"Great food, isn't it?" Ron muttered to Harry through the hangings.</p>
+                    </article>
+                    <article>
+                        <h3>Branding</h3>
+                        <p>"Hope to see you in Hufflepuff!" said the Friar. "My old house, you know."</p>
+                    </article>
+                    <article>
+                        <h3>Branding</h3>
+                        <p>One by one, the ghosts floated away through the opposite wall.</p>
+                    </article>
+                </section>
+                <section>
+                    <form>
+                        <label for="enter-email">Sign up for our newsletter</label>
+                        <input type="text" id="enter-email">
+                        <input type="submit" value="Sign me up!">
+                    </form>
+                </section>
 
             </main>
             <footer>
+                <span><img src="ressurser/logo1.png" alt="Logoen til nettstedet"></span>
+                <p>Companyrights Companyname 2023</p>
+                <nav>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>LinkedIn</li>
+                    </ul>
+                </nav>
 
             </footer>
         </div>
