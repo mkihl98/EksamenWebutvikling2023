@@ -19,6 +19,16 @@ body{
             grid-area: header;
             @extend .header;
 
+            nav{
+                ul{
+                    #home{
+                        font-weight: 800;
+                        text-decoration: underline;
+                        text-decoration-color: #e6bd43;
+                    }
+                }
+            }
+
             #video{
                 /*Se kilde 3 i referanseliste*/
                 display: none;
@@ -31,6 +41,7 @@ body{
 
         footer{
             grid-area: footer;
+            @extend .footer;
         }
     }
     /*Slutt*/
@@ -48,6 +59,14 @@ body{
 
                 #video{
                     display: block;
+                    /*Se kilde 3 i referanseliste*/
+                    width: 100%;
+                    position: absolute;
+                    top: 200px;
+                    z-index: -1;
+                    height: 400px;
+                    object-fit: cover; /*Se kilde 4 i referanseliste*/
+                    opacity: 0.5; /*Se kilde 5 i referanseliste*/
                 }
 
                 #image{
@@ -71,6 +90,34 @@ body{
         }
     }
     /*Slutt*/
+
+    /*Portfolio/produktsiden: grid på hovedkomponentene header, main og footer:*/
+    /*CSS for mobil start*/
+    #grid-products{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "header"
+                            "main"
+                            "footer";
+
+        header{
+            grid-area: header;
+            @extend .header;
+        }
+
+        main{
+            grid-area: main;
+        }
+
+        footer{
+            grid-area: footer;
+            @extend .footer;
+        }
+    }
+
+    /*Slutt*/
+    /*CSS for desktop start*/
 }
 
 /*Oppsett for headeren*/
@@ -100,12 +147,16 @@ body{
             li{
                 list-style: none;
                 font-size: 2rem;
-                padding: 0.5rem 0;
+                padding: 0.6rem 0;
 
                 a{
                     text-decoration: none;
                     color: #000;
                 }
+            }
+
+            #contact{
+                padding: 1.3rem 0;
             }
         }
     }
@@ -114,9 +165,9 @@ body{
         /*Se kilde 3 i referanseliste*/
         width: 100%;
         position: absolute;
-        top: 410px;
+        top: 440px;
         z-index: -1;
-        height: 400px;
+        height: 460px;
         object-fit: cover; /*Se kilde 4 i referanseliste*/
         opacity: 0.5; /*Se kilde 5 i referanseliste*/
     }
@@ -124,7 +175,7 @@ body{
     h1{
         padding: 2rem 3rem 2rem 3rem;
         font-size: 2.5rem;
-        font-weight: bold;
+        font-weight: 800;
         margin: 1rem 0 0 0;
         text-align: center;
     }
@@ -138,6 +189,7 @@ body{
     .btn{
         @extend .buttons;
         text-decoration: none;
+        margin: 0.5rem 0 3.5rem 0;
     }
 
     @media only screen and (min-width: 700px) {
@@ -154,6 +206,46 @@ body{
             }
         }
 
+        h1{
+            padding: 5rem 3rem 2rem 3rem;
+        }
+    }
+}
+
+/*Oppsett for footeren*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3.5rem 2rem 2rem 2rem;
+    background-color: #252525;
+
+    p{
+        color: #fff;
+    }
+
+    nav{
+        ul{
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+
+            li{
+                list-style: none;
+                padding: 0.5rem;
+
+                a{
+                    color: #fff;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 700px) {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -168,5 +260,3 @@ body{
         color: #e6bd43;
     }
 }
-
-/*Se her for idé til videobakgrunn: https://stackoverflow.com/questions/54208390/html-css-video-as-background-for-the-header */

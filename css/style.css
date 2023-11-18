@@ -10,6 +10,10 @@ body {
   /*Slutt*/
   /*CSS for desktop start*/
   /*Slutt*/
+  /*Portfolio/produktsiden: grid på hovedkomponentene header, main og footer:*/
+  /*CSS for mobil start*/
+  /*Slutt*/
+  /*CSS for desktop start*/
 }
 body #grid-index {
   display: grid;
@@ -19,6 +23,11 @@ body #grid-index {
 }
 body #grid-index header {
   grid-area: header;
+}
+body #grid-index header nav ul #home {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: #e6bd43;
 }
 body #grid-index header #video {
   /*Se kilde 3 i referanseliste*/
@@ -43,6 +52,15 @@ body #grid-index footer {
   }
   body #grid-index header #video {
     display: block;
+    /*Se kilde 3 i referanseliste*/
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    z-index: -1;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover; /*Se kilde 4 i referanseliste*/
+    opacity: 0.5; /*Se kilde 5 i referanseliste*/
   }
   body #grid-index header #image {
     display: none;
@@ -60,86 +78,138 @@ body #grid-index footer {
     grid-row-end: 4;
   }
 }
+body #grid-products {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "main" "footer";
+}
+body #grid-products header {
+  grid-area: header;
+}
+body #grid-products main {
+  grid-area: main;
+}
+body #grid-products footer {
+  grid-area: footer;
+}
 
 /*Oppsett for headeren*/
-.header, body #grid-index header {
+.header, body #grid-index header, body #grid-products header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.header nav, body #grid-index header nav {
+.header nav, body #grid-index header nav, body #grid-products header nav {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.header nav span, body #grid-index header nav span {
+.header nav span, body #grid-index header nav span, body #grid-products header nav span {
   display: flex;
   justify-content: center;
 }
-.header nav ul, body #grid-index header nav ul {
+.header nav ul, body #grid-index header nav ul, body #grid-products header nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
   padding: 0;
 }
-.header nav ul li, body #grid-index header nav ul li {
+.header nav ul li, body #grid-index header nav ul li, body #grid-products header nav ul li {
   list-style: none;
   font-size: 2rem;
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
 }
-.header nav ul li a, body #grid-index header nav ul li a {
+.header nav ul li a, body #grid-index header nav ul li a, body #grid-products header nav ul li a {
   text-decoration: none;
   color: #000;
 }
-.header #image, body #grid-index header #image {
+.header nav ul #contact, body #grid-index header nav ul #contact, body #grid-products header nav ul #contact {
+  padding: 1.3rem 0;
+}
+.header #image, body #grid-index header #image, body #grid-products header #image {
   /*Se kilde 3 i referanseliste*/
   width: 100%;
   position: absolute;
-  top: 410px;
+  top: 440px;
   z-index: -1;
-  height: 400px;
+  height: 460px;
   -o-object-fit: cover;
      object-fit: cover; /*Se kilde 4 i referanseliste*/
   opacity: 0.5; /*Se kilde 5 i referanseliste*/
 }
-.header h1, body #grid-index header h1 {
+.header h1, body #grid-index header h1, body #grid-products header h1 {
   padding: 2rem 3rem 2rem 3rem;
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 800;
   margin: 1rem 0 0 0;
   text-align: center;
 }
-.header p, body #grid-index header p {
+.header p, body #grid-index header p, body #grid-products header p {
   font-size: 1.5rem;
   padding: 0 2rem 1rem 2rem;
   margin: 0;
 }
-.header .btn, body #grid-index header .btn {
+.header .btn, body #grid-index header .btn, body #grid-products header .btn {
   text-decoration: none;
+  margin: 0.5rem 0 3.5rem 0;
 }
 @media only screen and (min-width: 700px) {
-  .header nav, body #grid-index header nav {
+  .header nav, body #grid-index header nav, body #grid-products header nav {
     flex-direction: row;
     justify-content: space-between;
   }
-  .header nav ul, body #grid-index header nav ul {
+  .header nav ul, body #grid-index header nav ul, body #grid-products header nav ul {
     flex-direction: row;
   }
-  .header nav ul li, body #grid-index header nav ul li {
+  .header nav ul li, body #grid-index header nav ul li, body #grid-products header nav ul li {
     padding: 0.5rem 0.5rem;
+  }
+  .header h1, body #grid-index header h1, body #grid-products header h1 {
+    padding: 5rem 3rem 2rem 3rem;
   }
 }
 
-.buttons, .header .btn, body #grid-index header .btn {
+/*Oppsett for footeren*/
+.footer, body #grid-index footer, body #grid-products footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3.5rem 2rem 2rem 2rem;
+  background-color: #252525;
+}
+.footer p, body #grid-index footer p, body #grid-products footer p {
+  color: #fff;
+}
+.footer nav ul, body #grid-index footer nav ul, body #grid-products footer nav ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+.footer nav ul li, body #grid-index footer nav ul li, body #grid-products footer nav ul li {
+  list-style: none;
+  padding: 0.5rem;
+}
+.footer nav ul li a, body #grid-index footer nav ul li a, body #grid-products footer nav ul li a {
+  color: #fff;
+  font-size: 2rem;
+}
+@media only screen and (min-width: 700px) {
+  .footer, body #grid-index footer, body #grid-products footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.buttons, .header .btn, body #grid-index header .btn, body #grid-products header .btn {
   background-color: #e6bd43;
   color: #000;
   padding: 1rem;
   font-weight: 800;
 }
-.buttons:hover, .header .btn:hover, body #grid-index header .btn:hover {
+.buttons:hover, .header .btn:hover, body #grid-index header .btn:hover, body #grid-products header .btn:hover {
   background-color: #000;
   color: #e6bd43;
-}
-
-/*Se her for idé til videobakgrunn: https://stackoverflow.com/questions/54208390/html-css-video-as-background-for-the-header *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

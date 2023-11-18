@@ -8,6 +8,9 @@
         <!--Opengraph metadata start-->
         <!--Slutt-->
         <title></title>
+        <link href="css/font/css/fontawesome.css" rel="stylesheet">
+        <link href="css/font/css/brands.css" rel="stylesheet">
+        <link href="css/font/css/solid.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
@@ -18,10 +21,10 @@
                         <a href="index.html"><img src="ressurser/logo1.png" alt="Logoen til nettstedet"></a>
                     </span>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a class="btn" href="#">Contact</a></li>
+                        <li id="home"><a href="index.html">Home</a></li>
+                        <li id="portfolio"><a href="products.html">Portfolio</a></li>
+                        <li id="about"><a href="#">About</a></li>
+                        <li id="contact"><a class="btn" href="#">Contact</a></li>
                     </ul>
                 </nav>
                 <!--Bakgrunnsvideo i header-området. Jeg lærte meg hvordan jeg legger inn autoplay muted videoer underveis i kursets obliger, og har brukt dette som inspirasjon her. Jeg valgte også å legge på loop, slik at videoen ikke stopper etter å ha spilt én gang. Kildene jeg brukte for å lære meg dette i obligen, var LMS-et til emnet, samt kilde nr. 1 i referanselisten-->
@@ -76,19 +79,17 @@
                         <input type="submit" value="Sign me up!">
                     </form>
                 </section>
-
             </main>
             <footer>
                 <span><img src="ressurser/logo1.png" alt="Logoen til nettstedet"></span>
                 <p>Companyrights Companyname 2023</p>
                 <nav>
                     <ul>
-                        <li>Facebook</li>
-                        <li>Instagram</li>
-                        <li>LinkedIn</li>
+                        <li><a href="https://www.facebook.com/" aria-label="Kontakt oss på Facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/" aria-label="Kontakt oss på Instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/" aria-label="Kontakt oss på LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
                     </ul>
                 </nav>
-
             </footer>
         </div>
     </body>
