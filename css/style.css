@@ -5,6 +5,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
   /*Forsiden: grid på hovedkomponentene header, main og footer:*/
   /*CSS for mobil start*/
   /*Slutt*/
@@ -29,12 +30,55 @@ body #grid-index header nav ul #home {
   text-decoration: underline;
   text-decoration-color: #e6bd43;
 }
+body #grid-index header nav ul .btn {
+  text-decoration: none;
+  margin: 0 0 0.5rem 0;
+}
 body #grid-index header #video {
   /*Se kilde 3 i referanseliste*/
   display: none;
 }
+body #grid-index header section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: self-start;
+}
+body #grid-index header section h1 {
+  margin: 1rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+body #grid-index header section p {
+  font-size: 1.5rem;
+  padding: 1rem 1rem 2rem 1rem;
+  margin: 0;
+  text-align: center;
+}
+body #grid-index header section .btn {
+  text-decoration: none;
+  margin: 0 0 0.5rem 0;
+}
 body #grid-index main {
   grid-area: main;
+}
+body #grid-index main #subheading {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.5rem;
+}
+body #grid-index main #subheading h2 {
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+}
+body #grid-index main #subheading p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+body #grid-index main #about {
+  background-color: #e6bd43;
 }
 body #grid-index footer {
   grid-area: footer;
@@ -87,11 +131,169 @@ body #grid-products {
 body #grid-products header {
   grid-area: header;
 }
+body #grid-products header nav ul #portfolio {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: #e6bd43;
+}
+body #grid-products header nav ul .btn {
+  text-decoration: none;
+  margin: 0 0 0.5rem 0;
+}
+body #grid-products header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  align-self: self-start;
+  text-align: center;
+}
 body #grid-products main {
   grid-area: main;
+  margin: 1.5rem;
+  max-width: 1600px;
+}
+body #grid-products main #navigering h2 {
+  border-bottom: 5px solid #e6bd43;
+  font-weight: 800;
+  font-size: 1.7rem;
+  padding: 0 0 1rem 0;
+}
+body #grid-products main #navigering nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0;
+}
+body #grid-products main #navigering nav ul li {
+  list-style: none;
+  padding: 0.4rem;
+  margin: 0.7rem;
+  font-size: 1.5rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+body #grid-products main #navigering nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+body #grid-products main #branding {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body #grid-products main #branding h3 {
+  border-bottom: 5px solid #e6bd43;
+  font-weight: 800;
+  font-size: 1.7rem;
+  padding: 0 0 1rem 0;
+  width: 100%;
+}
+body #grid-products main #branding article {
+  padding: 0 0 0 1.3rem;
+  flex-grow: 2;
+  max-width: 692px;
+}
+body #grid-products main #branding article img {
+  width: 100%;
+}
+body #grid-products main #branding article h4 {
+  font-weight: 800;
+  margin: 0.5rem 0 2.5rem 0;
+  font-size: 1.3rem;
+}
+body #grid-products main #design {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body #grid-products main #design h3 {
+  border-bottom: 5px solid #e6bd43;
+  font-weight: 800;
+  font-size: 1.7rem;
+  padding: 0 0 1rem 0;
+  width: 100%;
+}
+body #grid-products main #design article {
+  padding: 0 0 0 1.3rem;
+  flex-grow: 2;
+  max-width: 692px;
+}
+body #grid-products main #design article img {
+  width: 100%;
+}
+body #grid-products main #design article h4 {
+  font-weight: 800;
+  margin: 0.5rem 0 2.5rem 0;
+  font-size: 1.3rem;
+}
+body #grid-products main #development {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+body #grid-products main #development h3 {
+  border-bottom: 5px solid #e6bd43;
+  font-weight: 800;
+  font-size: 1.7rem;
+  padding: 0 0 1rem 0;
+  width: 100%;
+}
+body #grid-products main #development article {
+  padding: 0 0 0 1.3rem;
+  flex-grow: 2;
+  max-width: 692px;
+}
+body #grid-products main #development article img {
+  width: 100%;
+}
+body #grid-products main #development article h4 {
+  font-weight: 800;
+  margin: 0.5rem 0 2.5rem 0;
+  font-size: 1.3rem;
 }
 body #grid-products footer {
   grid-area: footer;
+}
+@media only screen and (min-width: 700px) {
+  body #grid-products {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+  body #grid-products header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  body #grid-products header nav {
+    max-height: 188.9px;
+  }
+  body #grid-products main {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  body #grid-products main #navigering h2 {
+    font-size: 2.5rem;
+  }
+  body #grid-products main #branding h3 {
+    font-size: 2.5rem;
+  }
+  body #grid-products main #design h3 {
+    font-size: 2.5rem;
+  }
+  body #grid-products main #development h3 {
+    font-size: 2.5rem;
+  }
+  body #grid-products footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
 }
 
 /*Oppsett for headeren*/
@@ -99,15 +301,18 @@ body #grid-products footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  height: 950px;
 }
 .header nav, body #grid-index header nav, body #grid-products header nav {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 0 1rem;
 }
 .header nav span, body #grid-index header nav span, body #grid-products header nav span {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .header nav ul, body #grid-index header nav ul, body #grid-products header nav ul {
   display: flex;
@@ -134,28 +339,15 @@ body #grid-products footer {
   position: absolute;
   top: 440px;
   z-index: -1;
-  height: 460px;
+  height: 500px;
   -o-object-fit: cover;
      object-fit: cover; /*Se kilde 4 i referanseliste*/
   opacity: 0.5; /*Se kilde 5 i referanseliste*/
 }
-.header h1, body #grid-index header h1, body #grid-products header h1 {
-  padding: 2rem 3rem 2rem 3rem;
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin: 1rem 0 0 0;
-  text-align: center;
-}
-.header p, body #grid-index header p, body #grid-products header p {
-  font-size: 1.5rem;
-  padding: 0 2rem 1rem 2rem;
-  margin: 0;
-}
-.header .btn, body #grid-index header .btn, body #grid-products header .btn {
-  text-decoration: none;
-  margin: 0.5rem 0 3.5rem 0;
-}
 @media only screen and (min-width: 700px) {
+  .header, body #grid-index header, body #grid-products header {
+    height: 600px;
+  }
   .header nav, body #grid-index header nav, body #grid-products header nav {
     flex-direction: row;
     justify-content: space-between;
@@ -164,10 +356,14 @@ body #grid-products footer {
     flex-direction: row;
   }
   .header nav ul li, body #grid-index header nav ul li, body #grid-products header nav ul li {
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 0.7rem;
+  }
+  .header #image, body #grid-index header #image, body #grid-products header #image {
+    top: 200px;
+    height: 400px;
   }
   .header h1, body #grid-index header h1, body #grid-products header h1 {
-    padding: 5rem 3rem 2rem 3rem;
+    padding: 4rem 3rem 2rem 3rem;
   }
 }
 
@@ -203,13 +399,14 @@ body #grid-products footer {
   }
 }
 
-.buttons, .header .btn, body #grid-index header .btn, body #grid-products header .btn {
+.buttons, body #grid-index header nav ul .btn, body #grid-index header section .btn, body #grid-products header nav ul .btn {
   background-color: #e6bd43;
   color: #000;
-  padding: 1rem;
+  padding: 1.1rem;
   font-weight: 800;
+  align-self: center;
 }
-.buttons:hover, .header .btn:hover, body #grid-index header .btn:hover, body #grid-products header .btn:hover {
+.buttons:hover, body #grid-index header nav ul .btn:hover, body #grid-index header section .btn:hover, body #grid-products header nav ul .btn:hover {
   background-color: #000;
   color: #e6bd43;
 }/*# sourceMappingURL=style.css.map */

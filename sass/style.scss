@@ -4,6 +4,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 
     /*Forsiden: grid på hovedkomponentene header, main og footer:*/
     /*CSS for mobil start*/
@@ -26,6 +27,12 @@ body{
                         text-decoration: underline;
                         text-decoration-color: #e6bd43;
                     }
+
+                    .btn{
+                        @extend .buttons;
+                        text-decoration: none;
+                        margin: 0 0 0.5rem 0;
+                    }
                 }
             }
 
@@ -33,10 +40,58 @@ body{
                 /*Se kilde 3 i referanseliste*/
                 display: none;
             }
+
+            section{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-self: self-start;
+
+                h1{
+                    margin: 1rem;
+                    font-size: 2.5rem;
+                    font-weight: 800;
+                    text-align: center;
+                }
+            
+                p{
+                    font-size: 1.5rem;
+                    padding: 1rem 1rem 2rem 1rem;
+                    margin: 0;
+                    text-align: center;
+                }
+            
+                .btn{
+                    @extend .buttons;
+                    text-decoration: none;
+                    margin: 0 0 0.5rem 0;
+                }
+            }
         }
 
         main{
             grid-area: main;
+
+            #subheading{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 1.5rem;
+
+                h2{
+                    font-weight: 800;
+                    font-size: 2rem;
+                    text-align: center;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+
+            #about{
+                background-color: #e6bd43;
+            }
         }
 
         footer{
@@ -104,10 +159,160 @@ body{
         header{
             grid-area: header;
             @extend .header;
+
+            nav{
+                ul{
+                    #portfolio{
+                        font-weight: 800;
+                        text-decoration: underline;
+                        text-decoration-color: #e6bd43;
+                    }
+
+                    .btn{
+                        @extend .buttons;
+                        text-decoration: none;
+                        margin: 0 0 0.5rem 0;
+                    }
+                }
+            }
+
+            h1{
+                font-size: 2.5rem;
+                font-weight: 800;
+                margin: 0;
+                align-self: self-start;
+                text-align: center;
+            }
         }
 
         main{
             grid-area: main;
+            margin: 1.5rem;
+            max-width: 1600px;
+
+            #navigering{
+                h2{
+                    border-bottom: 5px solid #e6bd43;
+                    font-weight: 800;
+                    font-size: 1.7rem;
+                    padding: 0 0 1rem 0;
+                }
+
+                nav{
+                    ul{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-items: flex-start;
+                        padding: 0;
+
+                        li{
+                            list-style: none;
+                            padding: 0.4rem;
+                            margin: 0.7rem;
+                            font-size: 1.5rem;
+                            border: 2px solid #000;
+                            border-radius: 5px;
+
+                            a{
+                                text-decoration: none;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #branding{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                h3{
+                    border-bottom: 5px solid #e6bd43;
+                    font-weight: 800;
+                    font-size: 1.7rem;
+                    padding: 0 0 1rem 0;
+                    width: 100%;
+                }
+
+                article{
+                    padding: 0 0 0 1.3rem;
+                    flex-grow: 2;
+                    max-width: 692px;
+
+                    img{
+                        width: 100%;
+                    }
+
+                    h4{
+                        font-weight: 800;
+                        margin: 0.5rem 0 2.5rem 0;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            #design{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                h3{
+                    border-bottom: 5px solid #e6bd43;
+                    font-weight: 800;
+                    font-size: 1.7rem;
+                    padding: 0 0 1rem 0;
+                    width: 100%;
+                }
+
+                article{
+                    padding: 0 0 0 1.3rem;
+                    flex-grow: 2;
+                    max-width: 692px;
+
+                    img{
+                        width: 100%;
+                    }
+
+                    h4{
+                        font-weight: 800;
+                        margin: 0.5rem 0 2.5rem 0;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            #development{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                h3{
+                    border-bottom: 5px solid #e6bd43;
+                    font-weight: 800;
+                    font-size: 1.7rem;
+                    padding: 0 0 1rem 0;
+                    width: 100%;
+                }
+
+                article{
+                    padding: 0 0 0 1.3rem;
+                    flex-grow: 2;
+                    max-width: 692px;
+
+                    img{
+                        width: 100%;
+                    }
+
+                    h4{
+                        font-weight: 800;
+                        margin: 0.5rem 0 2.5rem 0;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
         }
 
         footer{
@@ -118,6 +323,61 @@ body{
 
     /*Slutt*/
     /*CSS for desktop start*/
+    @media only screen and (min-width: 700px) {
+        #grid-products{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, auto);
+
+            header{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+
+                nav{
+                    max-height: 188.9px;
+                }
+            }
+
+            main{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+
+                #navigering{
+                    h2{
+                        font-size: 2.5rem;
+                    }
+                }
+
+                #branding{
+                    h3{
+                        font-size: 2.5rem;
+                    }
+                }
+
+                #design{
+                    h3{
+                        font-size: 2.5rem;
+                    }
+                }
+
+                #development{
+                    h3{
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+
+            footer{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+        }
+    }
 }
 
 /*Oppsett for headeren*/
@@ -125,15 +385,18 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 950px;
 
     nav{
         display: flex;
         flex-direction: column;
         width: 100%;
+        padding: 0 1rem;
 
         span{
             display: flex;
             justify-content: center;
+            align-items: center;
 
         }
 
@@ -167,32 +430,14 @@ body{
         position: absolute;
         top: 440px;
         z-index: -1;
-        height: 460px;
+        height: 500px;
         object-fit: cover; /*Se kilde 4 i referanseliste*/
         opacity: 0.5; /*Se kilde 5 i referanseliste*/
     }
 
-    h1{
-        padding: 2rem 3rem 2rem 3rem;
-        font-size: 2.5rem;
-        font-weight: 800;
-        margin: 1rem 0 0 0;
-        text-align: center;
-    }
-
-    p{
-        font-size: 1.5rem;
-        padding: 0 2rem 1rem 2rem;
-        margin: 0;
-    }
-
-    .btn{
-        @extend .buttons;
-        text-decoration: none;
-        margin: 0.5rem 0 3.5rem 0;
-    }
-
     @media only screen and (min-width: 700px) {
+        height: 600px;
+
         nav{
             flex-direction: row;
             justify-content: space-between;
@@ -201,13 +446,18 @@ body{
                 flex-direction: row;
 
                 li{
-                    padding: 0.5rem 0.5rem;
+                    padding: 0.5rem 0.7rem;
                 }
             }
         }
 
+        #image{
+            top: 200px;
+            height: 400px;
+        }
+
         h1{
-            padding: 5rem 3rem 2rem 3rem;
+            padding: 4rem 3rem 2rem 3rem;
         }
     }
 }
@@ -252,8 +502,9 @@ body{
 .buttons{
     background-color: #e6bd43;
     color: #000;
-    padding: 1rem;
+    padding: 1.1rem;
     font-weight: 800;
+    align-self: center;
 
     &:hover{
         background-color: #000;
