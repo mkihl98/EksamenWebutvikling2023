@@ -129,6 +129,86 @@ body{
 
                 }
             }
+
+            #services{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                h2{
+                    flex-basis: 100%;
+                    padding: 2rem 0;
+                    display: flex;
+                    justify-content: center;
+                    font-weight: 800;
+
+                }
+
+                article{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    min-width: 100px;
+                    max-width: 300px;
+                    flex-grow: 1;
+                    padding: 1.5rem 0;
+
+                    i{
+                        font-size: 2.5rem;
+                    }
+
+                    h3{
+                        font-weight: 800;
+                        margin: 0.5rem 0;
+                    }
+
+                    p{
+                        font-size: 1.1rem;
+                        text-align: center;
+                    }
+                }
+            }
+
+            #newsletter{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: #dfdddd;
+                text-align: center;
+                height: 250px;
+
+                form{
+                    label{
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        display: block;
+                        width: 100%;
+                    }
+
+                    #enter-email{
+                        padding: 1.45rem 2rem 1.1rem 2rem;
+                        border: none;
+                    }
+
+                    #sign-up{
+                        background-color: #e6bd43;
+                        border: none;
+                        text-align: center;
+                        padding: 0.95rem;
+                        margin: 2rem 0 0 0;
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        width: fit-content;
+
+                        &:hover{
+                            background-color: #000;
+                            color: #e6bd43;
+                        }
+                    }
+                }
+            }
         }
 
         footer{
@@ -200,6 +280,22 @@ body{
                         a:hover{
                             background-color: #000;
                             color: #e6bd43;
+                        }
+                    }
+                }
+
+                #services{
+                    justify-content: space-evenly;
+
+                    h2{
+                        font-size: 2.5rem;
+                    }
+                }
+
+                #newsletter{
+                    form{
+                        label{
+                            font-size: 2.5rem;
                         }
                     }
                 }
@@ -454,6 +550,36 @@ body{
             }
         }
     }
+    /*Slutt*/
+
+    /*About-siden: grid på hovedkomponentene header, main og footer:*/
+    /*CSS for mobil start*/
+    #grid-about{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "header"
+                            "main"
+                            "footer";
+        
+        header{
+            grid-area: header;
+            @extend .header;
+        }
+
+        main{
+            grid-area: main;
+        }
+
+        footer{
+            grid-area: footer;
+            @extend .footer;
+        }
+    }
+    /*Slutt*/
+    /*CSS for desktop start*/
+
+    /*Slutt*/
 }
 
 /*Oppsett for headeren*/

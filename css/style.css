@@ -15,6 +15,12 @@ body {
   /*CSS for mobil start*/
   /*Slutt*/
   /*CSS for desktop start*/
+  /*Slutt*/
+  /*About-siden: grid på hovedkomponentene header, main og footer:*/
+  /*CSS for mobil start*/
+  /*Slutt*/
+  /*CSS for desktop start*/
+  /*Slutt*/
 }
 body #grid-index {
   display: grid;
@@ -113,6 +119,73 @@ body #grid-index main #about #about-text a {
   width: -moz-fit-content;
   width: fit-content;
 }
+body #grid-index main #services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body #grid-index main #services h2 {
+  flex-basis: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  font-weight: 800;
+}
+body #grid-index main #services article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 100px;
+  max-width: 300px;
+  flex-grow: 1;
+  padding: 1.5rem 0;
+}
+body #grid-index main #services article i {
+  font-size: 2.5rem;
+}
+body #grid-index main #services article h3 {
+  font-weight: 800;
+  margin: 0.5rem 0;
+}
+body #grid-index main #services article p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+body #grid-index main #newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #dfdddd;
+  text-align: center;
+  height: 250px;
+}
+body #grid-index main #newsletter form label {
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: block;
+  width: 100%;
+}
+body #grid-index main #newsletter form #enter-email {
+  padding: 1.45rem 2rem 1.1rem 2rem;
+  border: none;
+}
+body #grid-index main #newsletter form #sign-up {
+  background-color: #e6bd43;
+  border: none;
+  text-align: center;
+  padding: 0.95rem;
+  margin: 2rem 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body #grid-index main #newsletter form #sign-up:hover {
+  background-color: #000;
+  color: #e6bd43;
+}
 body #grid-index footer {
   grid-area: footer;
 }
@@ -170,6 +243,15 @@ body #grid-index footer {
   body #grid-index main #about #about-text a:hover {
     background-color: #000;
     color: #e6bd43;
+  }
+  body #grid-index main #services {
+    justify-content: space-evenly;
+  }
+  body #grid-index main #services h2 {
+    font-size: 2.5rem;
+  }
+  body #grid-index main #newsletter form label {
+    font-size: 2.5rem;
   }
   body #grid-index footer {
     grid-column-start: 1;
@@ -355,45 +437,60 @@ body #grid-products footer {
     grid-row-end: 4;
   }
 }
+body #grid-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "main" "footer";
+}
+body #grid-about header {
+  grid-area: header;
+}
+body #grid-about main {
+  grid-area: main;
+}
+body #grid-about footer {
+  grid-area: footer;
+}
 
 /*Oppsett for headeren*/
-.header, body #grid-index header, body #grid-products header {
+.header, body #grid-index header, body #grid-products header, body #grid-about header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   height: 950px;
 }
-.header nav, body #grid-index header nav, body #grid-products header nav {
+.header nav, body #grid-index header nav, body #grid-products header nav, body #grid-about header nav {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 0 1rem;
 }
-.header nav span, body #grid-index header nav span, body #grid-products header nav span {
+.header nav span, body #grid-index header nav span, body #grid-products header nav span, body #grid-about header nav span {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header nav ul, body #grid-index header nav ul, body #grid-products header nav ul {
+.header nav ul, body #grid-index header nav ul, body #grid-products header nav ul, body #grid-about header nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
   padding: 0;
 }
-.header nav ul li, body #grid-index header nav ul li, body #grid-products header nav ul li {
+.header nav ul li, body #grid-index header nav ul li, body #grid-products header nav ul li, body #grid-about header nav ul li {
   list-style: none;
   font-size: 2rem;
   padding: 0.6rem 0;
 }
-.header nav ul li a, body #grid-index header nav ul li a, body #grid-products header nav ul li a {
+.header nav ul li a, body #grid-index header nav ul li a, body #grid-products header nav ul li a, body #grid-about header nav ul li a {
   text-decoration: none;
   color: #000;
 }
-.header nav ul #contact, body #grid-index header nav ul #contact, body #grid-products header nav ul #contact {
+.header nav ul #contact, body #grid-index header nav ul #contact, body #grid-products header nav ul #contact, body #grid-about header nav ul #contact {
   padding: 1.3rem 0;
 }
-.header #image, body #grid-index header #image, body #grid-products header #image {
+.header #image, body #grid-index header #image, body #grid-products header #image, body #grid-about header #image {
   /*Se kilde 3 i referanseliste*/
   width: 100%;
   position: absolute;
@@ -405,30 +502,30 @@ body #grid-products footer {
   opacity: 0.5; /*Se kilde 5 i referanseliste*/
 }
 @media only screen and (min-width: 700px) {
-  .header, body #grid-index header, body #grid-products header {
+  .header, body #grid-index header, body #grid-products header, body #grid-about header {
     height: 600px;
   }
-  .header nav, body #grid-index header nav, body #grid-products header nav {
+  .header nav, body #grid-index header nav, body #grid-products header nav, body #grid-about header nav {
     flex-direction: row;
     justify-content: space-between;
   }
-  .header nav ul, body #grid-index header nav ul, body #grid-products header nav ul {
+  .header nav ul, body #grid-index header nav ul, body #grid-products header nav ul, body #grid-about header nav ul {
     flex-direction: row;
   }
-  .header nav ul li, body #grid-index header nav ul li, body #grid-products header nav ul li {
+  .header nav ul li, body #grid-index header nav ul li, body #grid-products header nav ul li, body #grid-about header nav ul li {
     padding: 0.5rem 0.7rem;
   }
-  .header #image, body #grid-index header #image, body #grid-products header #image {
+  .header #image, body #grid-index header #image, body #grid-products header #image, body #grid-about header #image {
     top: 200px;
     height: 400px;
   }
-  .header h1, body #grid-index header h1, body #grid-products header h1 {
+  .header h1, body #grid-index header h1, body #grid-products header h1, body #grid-about header h1 {
     padding: 4rem 0 0 0;
   }
 }
 
 /*Oppsett for footeren*/
-.footer, body #grid-index footer, body #grid-products footer {
+.footer, body #grid-index footer, body #grid-products footer, body #grid-about footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -436,24 +533,24 @@ body #grid-products footer {
   padding: 3.5rem 2rem 2rem 2rem;
   background-color: #252525;
 }
-.footer p, body #grid-index footer p, body #grid-products footer p {
+.footer p, body #grid-index footer p, body #grid-products footer p, body #grid-about footer p {
   color: #fff;
 }
-.footer nav ul, body #grid-index footer nav ul, body #grid-products footer nav ul {
+.footer nav ul, body #grid-index footer nav ul, body #grid-products footer nav ul, body #grid-about footer nav ul {
   display: flex;
   flex-direction: row;
   padding: 0;
 }
-.footer nav ul li, body #grid-index footer nav ul li, body #grid-products footer nav ul li {
+.footer nav ul li, body #grid-index footer nav ul li, body #grid-products footer nav ul li, body #grid-about footer nav ul li {
   list-style: none;
   padding: 0.5rem;
 }
-.footer nav ul li a, body #grid-index footer nav ul li a, body #grid-products footer nav ul li a {
+.footer nav ul li a, body #grid-index footer nav ul li a, body #grid-products footer nav ul li a, body #grid-about footer nav ul li a {
   color: #fff;
   font-size: 2rem;
 }
 @media only screen and (min-width: 700px) {
-  .footer, body #grid-index footer, body #grid-products footer {
+  .footer, body #grid-index footer, body #grid-products footer, body #grid-about footer {
     flex-direction: row;
     justify-content: space-between;
   }
