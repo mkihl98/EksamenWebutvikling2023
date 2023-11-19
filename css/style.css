@@ -40,7 +40,8 @@ body #grid-index header #video {
 }
 body #grid-index header section {
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
+  flex-wrap: wrap;
   justify-content: center;
   align-self: self-start;
 }
@@ -66,19 +67,51 @@ body #grid-index main {
 body #grid-index main #subheading {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 1.5rem;
 }
 body #grid-index main #subheading h2 {
   font-weight: 800;
   font-size: 2rem;
   text-align: center;
+  flex-basis: 85%;
 }
 body #grid-index main #subheading p {
   font-size: 1.5rem;
   text-align: center;
+  flex-basis: 85%;
 }
 body #grid-index main #about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: #e6bd43;
+  padding: 2.5rem 1.5rem;
+  justify-content: center;
+}
+body #grid-index main #about #about-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 60%;
+}
+body #grid-index main #about #about-text h2 {
+  font-weight: 800;
+}
+body #grid-index main #about #about-text p {
+  font-size: 1.3rem;
+}
+body #grid-index main #about #about-text a {
+  text-decoration: none;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 3px;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 body #grid-index footer {
   grid-area: footer;
@@ -109,11 +142,34 @@ body #grid-index footer {
   body #grid-index header #image {
     display: none;
   }
+  body #grid-index header section {
+    flex-basis: 70%;
+  }
   body #grid-index main {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+  }
+  body #grid-index main #subheading h2 {
+    flex-basis: 60%;
+  }
+  body #grid-index main #subheading p {
+    flex-basis: 60%;
+  }
+  body #grid-index main #about {
+    justify-content: flex-start;
+  }
+  body #grid-index main #about #image {
+    padding: 0 2rem 0 0;
+  }
+  body #grid-index main #about #about-text {
+    justify-content: center;
+    padding: 0 0 3rem 0;
+  }
+  body #grid-index main #about #about-text a:hover {
+    background-color: #000;
+    color: #e6bd43;
   }
   body #grid-index footer {
     grid-column-start: 1;
@@ -282,6 +338,10 @@ body #grid-products footer {
   body #grid-products main #branding h3 {
     font-size: 2.5rem;
   }
+  body #grid-products main #branding article img:hover {
+    transform: scale(1.07);
+    transition: 0.7s ease-out;
+  }
   body #grid-products main #design h3 {
     font-size: 2.5rem;
   }
@@ -363,7 +423,7 @@ body #grid-products footer {
     height: 400px;
   }
   .header h1, body #grid-index header h1, body #grid-products header h1 {
-    padding: 4rem 3rem 2rem 3rem;
+    padding: 4rem 0 0 0;
   }
 }
 
@@ -399,6 +459,7 @@ body #grid-products footer {
   }
 }
 
+/*Buttons i header-området:*/
 .buttons, body #grid-index header nav ul .btn, body #grid-index header section .btn, body #grid-products header nav ul .btn {
   background-color: #e6bd43;
   color: #000;
@@ -406,7 +467,9 @@ body #grid-products footer {
   font-weight: 800;
   align-self: center;
 }
-.buttons:hover, body #grid-index header nav ul .btn:hover, body #grid-index header section .btn:hover, body #grid-products header nav ul .btn:hover {
-  background-color: #000;
-  color: #e6bd43;
+@media only screen and (min-width: 700px) {
+  .buttons:hover, body #grid-index header nav ul .btn:hover, body #grid-index header section .btn:hover, body #grid-products header nav ul .btn:hover {
+    background-color: #000;
+    color: #e6bd43;
+  }
 }/*# sourceMappingURL=style.css.map */
