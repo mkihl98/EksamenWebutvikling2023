@@ -30,6 +30,8 @@ body #grid-index {
 }
 body #grid-index header {
   grid-area: header;
+  height: 950px;
+  justify-content: center;
 }
 body #grid-index header nav ul #home {
   font-weight: 800;
@@ -44,9 +46,12 @@ body #grid-index header #video {
   /*Se kilde 3 i referanseliste*/
   display: none;
 }
+body #grid-index header #image {
+  opacity: 0.5; /*Se kilde 5 i referanseliste*/
+  height: 500px;
+}
 body #grid-index header section {
   display: flex;
-  /*flex-direction: column;*/
   flex-wrap: wrap;
   justify-content: center;
   align-self: self-start;
@@ -199,6 +204,7 @@ body #grid-index footer {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    height: 600px;
   }
   body #grid-index header #video {
     display: block;
@@ -268,6 +274,8 @@ body #grid-products {
 }
 body #grid-products header {
   grid-area: header;
+  height: 950px;
+  justify-content: center;
 }
 body #grid-products header nav ul #portfolio {
   font-weight: 800;
@@ -277,6 +285,10 @@ body #grid-products header nav ul #portfolio {
 body #grid-products header nav ul .btn {
   text-decoration: none;
   margin: 0 0 0.5rem 0;
+}
+body #grid-products header #image {
+  opacity: 0.5; /*Se kilde 5 i referanseliste*/
+  height: 500px;
 }
 body #grid-products header h1 {
   font-size: 2.5rem;
@@ -404,9 +416,13 @@ body #grid-products footer {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    height: 600px;
   }
   body #grid-products header nav {
     max-height: 188.9px;
+  }
+  body #grid-products header #image {
+    height: 400px;
   }
   body #grid-products main {
     grid-column-start: 1;
@@ -445,20 +461,170 @@ body #grid-about {
 }
 body #grid-about header {
   grid-area: header;
+  height: 1500px;
+}
+body #grid-about header nav ul #about {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: #e6bd43;
+}
+body #grid-about header nav ul .btn {
+  text-decoration: none;
+  margin: 0 0 0.5rem 0;
+}
+body #grid-about header #image {
+  height: 1050px;
+}
+body #grid-about header section {
+  background-color: rgba(255, 255, 255, 0.6274509804);
+  display: flex;
+  flex-direction: column;
+  /*align-self: center;*/
+  margin: 4rem 3rem 3rem 3rem;
+  padding: 2.5rem;
+  max-width: 700px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body #grid-about header section h1 {
+  font-weight: 800;
+  order: 2;
+  padding: 0;
+  margin: 1.2rem 0 0 0;
+}
+body #grid-about header section #name {
+  order: 1;
+  margin: 1rem 0 0 0;
+  font-size: 1.3rem;
+}
+body #grid-about header section #info {
+  order: 3;
+  font-size: 1.3rem;
+}
+body #grid-about header section a {
+  order: 4;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  margin: 0 0 0.5rem 0;
 }
 body #grid-about main {
   grid-area: main;
 }
+body #grid-about main #services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body #grid-about main #services h2 {
+  flex-basis: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  font-weight: 800;
+}
+body #grid-about main #services article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 100px;
+  max-width: 300px;
+  flex-grow: 1;
+  padding: 1.5rem 0;
+}
+body #grid-about main #services article i {
+  font-size: 2.5rem;
+}
+body #grid-about main #services article h3 {
+  font-weight: 800;
+  margin: 0.5rem 0;
+}
+body #grid-about main #services article p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+body #grid-about main #clients {
+  background-color: #e6bd43;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0.5rem;
+}
+body #grid-about main #clients h2 {
+  text-align: center;
+  font-weight: 800;
+  width: 100%;
+  padding: 0 0 2rem 0;
+}
+body #grid-about main #clients img {
+  padding: 1.5rem;
+}
+body #grid-about main #contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+body #grid-about main #contact h2 {
+  font-weight: 800;
+  text-align: center;
+  width: 100%;
+}
+body #grid-about main #contact form {
+  display: flex;
+  flex-direction: column;
+}
+body #grid-about main #contact #contact-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+body #grid-about main #contact #map {
+  width: 100%;
+}
 body #grid-about footer {
   grid-area: footer;
+}
+@media only screen and (min-width: 700px) {
+  body #grid-about {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+  body #grid-about header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 780px;
+    justify-content: end;
+  }
+  body #grid-about header nav {
+    height: 188.9px;
+  }
+  body #grid-about header #image {
+    height: 600px;
+  }
+  body #grid-about main {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  body #grid-about footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
 }
 
 /*Oppsett for headeren*/
 .header, body #grid-index header, body #grid-products header, body #grid-about header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  height: 950px;
 }
 .header nav, body #grid-index header nav, body #grid-products header nav, body #grid-about header nav {
   display: flex;
@@ -487,7 +653,7 @@ body #grid-about footer {
   text-decoration: none;
   color: #000;
 }
-.header nav ul #contact, body #grid-index header nav ul #contact, body #grid-products header nav ul #contact, body #grid-about header nav ul #contact {
+.header nav ul #contact-btn, body #grid-index header nav ul #contact-btn, body #grid-products header nav ul #contact-btn, body #grid-about header nav ul #contact-btn {
   padding: 1.3rem 0;
 }
 .header #image, body #grid-index header #image, body #grid-products header #image, body #grid-about header #image {
@@ -496,15 +662,10 @@ body #grid-about footer {
   position: absolute;
   top: 440px;
   z-index: -1;
-  height: 500px;
   -o-object-fit: cover;
      object-fit: cover; /*Se kilde 4 i referanseliste*/
-  opacity: 0.5; /*Se kilde 5 i referanseliste*/
 }
 @media only screen and (min-width: 700px) {
-  .header, body #grid-index header, body #grid-products header, body #grid-about header {
-    height: 600px;
-  }
   .header nav, body #grid-index header nav, body #grid-products header nav, body #grid-about header nav {
     flex-direction: row;
     justify-content: space-between;
@@ -517,7 +678,6 @@ body #grid-about footer {
   }
   .header #image, body #grid-index header #image, body #grid-products header #image, body #grid-about header #image {
     top: 200px;
-    height: 400px;
   }
   .header h1, body #grid-index header h1, body #grid-products header h1, body #grid-about header h1 {
     padding: 4rem 0 0 0;
@@ -557,15 +717,14 @@ body #grid-about footer {
 }
 
 /*Buttons i header-området:*/
-.buttons, body #grid-index header nav ul .btn, body #grid-index header section .btn, body #grid-products header nav ul .btn {
+.buttons, body #grid-index header nav ul .btn, body #grid-index header section .btn, body #grid-products header nav ul .btn, body #grid-about header nav ul .btn, body #grid-about header section a {
   background-color: #e6bd43;
   color: #000;
   padding: 1.1rem;
   font-weight: 800;
-  align-self: center;
 }
 @media only screen and (min-width: 700px) {
-  .buttons:hover, body #grid-index header nav ul .btn:hover, body #grid-index header section .btn:hover, body #grid-products header nav ul .btn:hover {
+  .buttons:hover, body #grid-index header nav ul .btn:hover, body #grid-index header section .btn:hover, body #grid-products header nav ul .btn:hover, body #grid-about header nav ul .btn:hover, body #grid-about header section a:hover {
     background-color: #000;
     color: #e6bd43;
   }

@@ -18,6 +18,8 @@ body{
         
         header{
             grid-area: header;
+            height: 950px;
+            justify-content: center;
             @extend .header;
 
             nav{
@@ -41,9 +43,13 @@ body{
                 display: none;
             }
 
+            #image{
+                opacity: 0.5; /*Se kilde 5 i referanseliste*/
+                height: 500px;
+            }
+
             section{
                 display: flex;
-                /*flex-direction: column;*/
                 flex-wrap: wrap;
                 justify-content: center;
                 align-self: self-start;
@@ -228,6 +234,7 @@ body{
                 grid-column-end: 4;
                 grid-row-start: 1;
                 grid-row-end: 2;
+                height: 600px;
 
                 #video{
                     display: block;
@@ -323,6 +330,8 @@ body{
 
         header{
             grid-area: header;
+            height: 950px;
+            justify-content: center;
             @extend .header;
 
             nav{
@@ -339,6 +348,11 @@ body{
                         margin: 0 0 0.5rem 0;
                     }
                 }
+            }
+
+            #image{
+                opacity: 0.5; /*Se kilde 5 i referanseliste*/
+                height: 500px;
             }
 
             h1{
@@ -498,9 +512,14 @@ body{
                 grid-column-end: 4;
                 grid-row-start: 1;
                 grid-row-end: 2;
+                height: 600px;
 
                 nav{
                     max-height: 188.9px;
+                }
+
+                #image{
+                    height: 400px;
                 }
             }
 
@@ -564,11 +583,158 @@ body{
         
         header{
             grid-area: header;
+            height: 1500px;
             @extend .header;
+
+            nav{
+                ul{
+                    #about{
+                        font-weight: 800;
+                        text-decoration: underline;
+                        text-decoration-color: #e6bd43;
+                    }
+
+                    .btn{
+                        @extend .buttons;
+                        text-decoration: none;
+                        margin: 0 0 0.5rem 0;
+                    }
+                }
+            }
+
+            #image{
+                height: 1050px;
+            }
+
+            section{
+                background-color: #ffffffa0;
+                display: flex;
+                flex-direction: column;
+                /*align-self: center;*/
+                margin: 4rem 3rem 3rem 3rem;
+                padding: 2.5rem;
+                max-width: 700px;
+                height: fit-content;
+
+                h1{
+                    font-weight: 800;
+                    order: 2;
+                    padding: 0;
+                    margin: 1.2rem 0 0 0;
+                }
+
+                #name{
+                    order: 1;
+                    margin: 1rem 0 0 0;
+                    font-size: 1.3rem;
+                }
+
+                #info{
+                    order: 3;
+                    font-size: 1.3rem;
+                }
+
+                a{
+                    order: 4;
+                    width: fit-content;
+                    @extend .buttons;
+                    text-decoration: none;
+                    margin: 0 0 0.5rem 0;
+                }
+            }
         }
 
         main{
             grid-area: main;
+
+            #services{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                h2{
+                    flex-basis: 100%;
+                    padding: 2rem 0;
+                    display: flex;
+                    justify-content: center;
+                    font-weight: 800;
+
+                }
+
+                article{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    min-width: 100px;
+                    max-width: 300px;
+                    flex-grow: 1;
+                    padding: 1.5rem 0;
+
+                    i{
+                        font-size: 2.5rem;
+                    }
+
+                    h3{
+                        font-weight: 800;
+                        margin: 0.5rem 0;
+                    }
+
+                    p{
+                        font-size: 1.1rem;
+                        text-align: center;
+                    }
+                }
+            }
+
+            #clients{
+                background-color: #e6bd43;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 2rem 0.5rem;
+
+                h2{
+                    text-align: center;
+                    font-weight: 800;
+                    width: 100%;
+                    padding: 0 0 2rem 0;
+                }
+
+                img{
+                    padding: 1.5rem;
+                }
+            }
+
+            #contact{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                h2{
+                    font-weight: 800;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                form{
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                #contact-info{
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 500px;
+                }
+
+                #map{
+                    width: 100%;
+                }
+            }
         }
 
         footer{
@@ -578,7 +744,43 @@ body{
     }
     /*Slutt*/
     /*CSS for desktop start*/
+    @media only screen and (min-width: 700px) {
+        #grid-about{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, auto);
 
+            header{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                height: 780px;
+                justify-content: end;
+
+                nav{
+                    height: 188.9px;
+                }
+
+                #image{
+                    height: 600px;
+                }
+            }
+
+            main{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            footer{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+        }
+    }
     /*Slutt*/
 }
 
@@ -586,8 +788,6 @@ body{
 .header{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    height: 950px;
 
     nav{
         display: flex;
@@ -620,7 +820,7 @@ body{
                 }
             }
 
-            #contact{
+            #contact-btn{
                 padding: 1.3rem 0;
             }
         }
@@ -632,13 +832,10 @@ body{
         position: absolute;
         top: 440px;
         z-index: -1;
-        height: 500px;
         object-fit: cover; /*Se kilde 4 i referanseliste*/
-        opacity: 0.5; /*Se kilde 5 i referanseliste*/
     }
 
     @media only screen and (min-width: 700px) {
-        height: 600px;
 
         nav{
             flex-direction: row;
@@ -654,8 +851,7 @@ body{
         }
 
         #image{
-            top: 200px;
-            height: 400px;
+            top: 200px;        
         }
 
         h1{
@@ -707,7 +903,6 @@ body{
     color: #000;
     padding: 1.1rem;
     font-weight: 800;
-    align-self: center;
 
     @media only screen and (min-width: 700px) {
         &:hover{
