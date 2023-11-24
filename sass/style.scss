@@ -99,7 +99,7 @@ body{
                 }
             }
 
-            #about{
+            #about-our-company{
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -209,7 +209,7 @@ body{
                         width: fit-content;
 
                         &:hover{
-                            background-color: #000;
+                            background-color: #252525;
                             color: #e6bd43;
                         }
                     }
@@ -235,6 +235,10 @@ body{
                 grid-row-start: 1;
                 grid-row-end: 2;
                 height: 600px;
+
+                nav{
+                    max-height: 188.9px;
+                }
 
                 #video{
                     display: block;
@@ -273,10 +277,10 @@ body{
                     }
                 }
 
-                #about{
+                #about-our-company{
                     justify-content: flex-start;
 
-                    #image{
+                    #about-image{
                         padding: 0 2rem 0 0;
                     }
 
@@ -285,7 +289,7 @@ body{
                         padding: 0 0 3rem 0;
 
                         a:hover{
-                            background-color: #000;
+                            background-color: #252525;
                             color: #e6bd43;
                         }
                     }
@@ -417,8 +421,10 @@ body{
 
                 article{
                     padding: 0 0 0 1.3rem;
+                    max-width: 350px;
+                    min-width: 200px;
                     flex-grow: 2;
-                    max-width: 692px;
+                    flex-basis: 692px;
 
                     img{
                         width: 100%;
@@ -710,9 +716,10 @@ body{
 
             #contact{
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
+                background-color: #f5f3f3;
 
                 h2{
                     font-weight: 800;
@@ -723,16 +730,69 @@ body{
                 form{
                     display: flex;
                     flex-direction: column;
+                    padding: 0 2rem 2rem 2rem;
+
+                    h3{
+                        font-weight: 800;
+                        font-size: 1.4rem;
+                    }
+
+                    input{
+                        width: 100%;
+                        border: none;
+                        border-radius: 2px;
+                        height: 40px;
+                        margin: 0.4rem 0 0.7rem 0;
+                    }
+
+                    #type-message{
+                        height: 130px;
+                    }
+
+                    #send-message{
+                        @extend .buttons;
+                        margin: 0.2rem 0 0.5rem 0;
+                        width: fit-content;
+                        border: none;
+                        height: fit-content;
+                        font-size: 1.1rem;
+                    }
                 }
 
                 #contact-info{
                     display: flex;
                     flex-direction: column;
                     max-width: 500px;
+                    padding: 0 2rem 2rem 2rem;
+
+                    h3{
+                        margin: 1rem 0 0.5rem 0;
+                        font-weight: 800;
+                        font-size: 1.4rem;
+                    }
+
+                    p{
+                        font-size: 1.3rem;
+                    }
+
+                    span{
+                        padding: 0.7rem 0;
+                        font-size: 1.3rem;
+
+                        i{
+                            padding: 0 1.5rem 0 0;
+                        }
+                    }
                 }
 
                 #map{
                     width: 100%;
+                    height: 250px;
+
+                    iframe{
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
         }
@@ -771,6 +831,32 @@ body{
                 grid-column-end: 4;
                 grid-row-start: 2;
                 grid-row-end: 3;
+
+                #services{
+                    h2{
+                        font-size: 2.2rem;
+                    }
+                }
+
+                #clients{
+                    h2{
+                        font-size: 2.2rem;
+                    }
+                }
+
+                #contact{
+                    flex-direction: row;
+                    align-items: baseline;
+                    padding: 3rem 0 0 0;
+
+                    h2{
+                        font-size: 2.2rem;
+                    }
+
+                    form{
+                        flex-basis: 50%;
+                    }
+                }
             }
 
             footer{
@@ -906,7 +992,7 @@ body{
 
     @media only screen and (min-width: 700px) {
         &:hover{
-            background-color: #000;
+            background-color: #252525;
             color: #e6bd43;
         }
     }

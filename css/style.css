@@ -92,7 +92,7 @@ body #grid-index main #subheading p {
   text-align: center;
   flex-basis: 85%;
 }
-body #grid-index main #about {
+body #grid-index main #about-our-company {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -100,19 +100,19 @@ body #grid-index main #about {
   padding: 2.5rem 1.5rem;
   justify-content: center;
 }
-body #grid-index main #about #about-text {
+body #grid-index main #about-our-company #about-text {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex-basis: 60%;
 }
-body #grid-index main #about #about-text h2 {
+body #grid-index main #about-our-company #about-text h2 {
   font-weight: 800;
 }
-body #grid-index main #about #about-text p {
+body #grid-index main #about-our-company #about-text p {
   font-size: 1.3rem;
 }
-body #grid-index main #about #about-text a {
+body #grid-index main #about-our-company #about-text a {
   text-decoration: none;
   color: #000;
   border: 3px solid #000;
@@ -188,7 +188,7 @@ body #grid-index main #newsletter form #sign-up {
   width: fit-content;
 }
 body #grid-index main #newsletter form #sign-up:hover {
-  background-color: #000;
+  background-color: #252525;
   color: #e6bd43;
 }
 body #grid-index footer {
@@ -205,6 +205,9 @@ body #grid-index footer {
     grid-row-start: 1;
     grid-row-end: 2;
     height: 600px;
+  }
+  body #grid-index header nav {
+    max-height: 188.9px;
   }
   body #grid-index header #video {
     display: block;
@@ -236,18 +239,18 @@ body #grid-index footer {
   body #grid-index main #subheading p {
     flex-basis: 60%;
   }
-  body #grid-index main #about {
+  body #grid-index main #about-our-company {
     justify-content: flex-start;
   }
-  body #grid-index main #about #image {
+  body #grid-index main #about-our-company #about-image {
     padding: 0 2rem 0 0;
   }
-  body #grid-index main #about #about-text {
+  body #grid-index main #about-our-company #about-text {
     justify-content: center;
     padding: 0 0 3rem 0;
   }
-  body #grid-index main #about #about-text a:hover {
-    background-color: #000;
+  body #grid-index main #about-our-company #about-text a:hover {
+    background-color: #252525;
     color: #e6bd43;
   }
   body #grid-index main #services {
@@ -341,8 +344,10 @@ body #grid-products main #branding h3 {
 }
 body #grid-products main #branding article {
   padding: 0 0 0 1.3rem;
+  max-width: 350px;
+  min-width: 200px;
   flex-grow: 2;
-  max-width: 692px;
+  flex-basis: 692px;
 }
 body #grid-products main #branding article img {
   width: 100%;
@@ -564,9 +569,10 @@ body #grid-about main #clients img {
 }
 body #grid-about main #contact {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  background-color: #f5f3f3;
 }
 body #grid-about main #contact h2 {
   font-weight: 800;
@@ -576,14 +582,59 @@ body #grid-about main #contact h2 {
 body #grid-about main #contact form {
   display: flex;
   flex-direction: column;
+  padding: 0 2rem 2rem 2rem;
+}
+body #grid-about main #contact form h3 {
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+body #grid-about main #contact form input {
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  height: 40px;
+  margin: 0.4rem 0 0.7rem 0;
+}
+body #grid-about main #contact form #type-message {
+  height: 130px;
+}
+body #grid-about main #contact form #send-message {
+  margin: 0.2rem 0 0.5rem 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1.1rem;
 }
 body #grid-about main #contact #contact-info {
   display: flex;
   flex-direction: column;
   max-width: 500px;
+  padding: 0 2rem 2rem 2rem;
+}
+body #grid-about main #contact #contact-info h3 {
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+body #grid-about main #contact #contact-info p {
+  font-size: 1.3rem;
+}
+body #grid-about main #contact #contact-info span {
+  padding: 0.7rem 0;
+  font-size: 1.3rem;
+}
+body #grid-about main #contact #contact-info span i {
+  padding: 0 1.5rem 0 0;
 }
 body #grid-about main #contact #map {
   width: 100%;
+  height: 250px;
+}
+body #grid-about main #contact #map iframe {
+  width: 100%;
+  height: 100%;
 }
 body #grid-about footer {
   grid-area: footer;
@@ -612,6 +663,23 @@ body #grid-about footer {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+  }
+  body #grid-about main #services h2 {
+    font-size: 2.2rem;
+  }
+  body #grid-about main #clients h2 {
+    font-size: 2.2rem;
+  }
+  body #grid-about main #contact {
+    flex-direction: row;
+    align-items: baseline;
+    padding: 3rem 0 0 0;
+  }
+  body #grid-about main #contact h2 {
+    font-size: 2.2rem;
+  }
+  body #grid-about main #contact form {
+    flex-basis: 50%;
   }
   body #grid-about footer {
     grid-column-start: 1;
@@ -717,15 +785,15 @@ body #grid-about footer {
 }
 
 /*Buttons i header-området:*/
-.buttons, body #grid-index header nav ul .btn, body #grid-index header section .btn, body #grid-products header nav ul .btn, body #grid-about header nav ul .btn, body #grid-about header section a {
+.buttons, body #grid-index header nav ul .btn, body #grid-index header section .btn, body #grid-products header nav ul .btn, body #grid-about header nav ul .btn, body #grid-about header section a, body #grid-about main #contact form #send-message {
   background-color: #e6bd43;
   color: #000;
   padding: 1.1rem;
   font-weight: 800;
 }
 @media only screen and (min-width: 700px) {
-  .buttons:hover, body #grid-index header nav ul .btn:hover, body #grid-index header section .btn:hover, body #grid-products header nav ul .btn:hover, body #grid-about header nav ul .btn:hover, body #grid-about header section a:hover {
-    background-color: #000;
+  .buttons:hover, body #grid-index header nav ul .btn:hover, body #grid-index header section .btn:hover, body #grid-products header nav ul .btn:hover, body #grid-about header nav ul .btn:hover, body #grid-about header section a:hover, body #grid-about main #contact form #send-message:hover {
+    background-color: #252525;
     color: #e6bd43;
   }
 }/*# sourceMappingURL=style.css.map */
