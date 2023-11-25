@@ -797,4 +797,38 @@ body #grid-about footer {
     background-color: #252525;
     color: #e6bd43;
   }
+}
+
+/*Justering av knappen for å skippe til hovedinnhold. Her har jeg brukt samme metode som jeg gjorde i obligen tidligere i kurset.*/
+.skip {
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip:focus {
+  position: relative;
+  left: 0;
+  width: auto;
+  height: 50px;
+  font-size: 1.5rem;
+  background-color: #fff;
+}
+
+/*Back to top-knapp. Se kilde nr. i referanselisten*/
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  text-align: end;
+}
+.back-to-top i {
+  font-size: 2.1rem;
+  padding: 1rem 1.3rem;
+  color: #fff;
+  background-color: #252525;
+  border-radius: 3px;
 }/*# sourceMappingURL=style.css.map */

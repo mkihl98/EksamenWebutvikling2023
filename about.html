@@ -4,11 +4,17 @@
         <!--Generell metadata start-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
+        <meta name="description" content="Read more about what services our company can offer you, and get in touch with us for assistance in branding, design or development.">
+        <meta name="keywords" content="Branding, Design, Development">
         <!--Slutt-->
         <!--Opengraph metadata start-->
+        <meta property="og:title" content="Read more about Business Website!">
+        <meta property="og:url" content="url to website"> <!--Siden nettstedet ikke ligger på server, får jeg ikke tak i en faktisk URL.-->
+        <meta property="og:image" content="https://pixabay.com/no/photos/eple-iphone-notisbok-penn-1841553/">
+        <meta property="og:description" content="Check out what Business Website is all about! Interested? We would love to hear from you.">
         <!--Slutt-->
-        <title>Busniess Website: read about us and get in touch</title>
-        <link rel="icon" type="image/x-icon" href="ressurser/favicon.ico">
+        <title>Busniess Website: read about us and get in touch</title> <!--Fant på et navn til nettstedet for å gjøre tittel og metadata enklere å skrive-->
+        <link rel="icon" type="image/x-icon" href="ressurser/favicon.ico"> <!--Se kilde nr. 8 i referanselisten-->
         <link href="css/font/css/fontawesome.css" rel="stylesheet">
         <link href="css/font/css/brands.css" rel="stylesheet">
         <link href="css/font/css/solid.css" rel="stylesheet">
@@ -18,6 +24,7 @@
         <div id="grid-about">
             <header>
                 <nav>
+                    <a href="#main-content" class="skip">Skip to main content</a>
                     <span>
                         <a href="index.html"><img src="ressurser/logo1.png" alt="Logoen til nettstedet"></a>
                     </span>
@@ -28,7 +35,7 @@
                         <li id="contact-btn"><a class="btn" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                <img id="image" src="ressurser/header-640.jpg" alt=" ">
+                <img id="image" src="ressurser/header-640.jpg" alt=" "> <!--Bakgrunnsbildet i headeren tilfører ikke noen spesiell mening til nettstedet. Jeg anser derfor dette som pynt, og holder alt-teksten tom.-->
                 <!--Kilde til bildet (kilde 2 i referanselisten): Bildet er tatt av <a href="https://pixabay.com/no/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1841553">Pexels</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1841553">Pixabay</a>-->
                 <section>
                     <h1>About Our Company</h1>
@@ -37,26 +44,26 @@
                     <a class="btn" href="#contact">Get in touch with us</a>
                 </section>
             </header>
-            <main>
+            <main id="main-content">
                 <section id="services">
                     <h2>Our Services</h2>
                     <article>
-                        <i class="fa-solid fa-users"></i>
+                        <i class="fa-solid fa-users" aria-hidden="true"></i>
                         <h3>Branding</h3>
                         <p>A ghost wearing a ruff and tights had suddenly noticed the first years.</p>
                     </article>
                     <article>
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
                         <h3>Branding</h3>
                         <p>"Great food, isn't it?" Ron muttered to Harry through the hangings.</p>
                     </article>
                     <article>
-                        <i class="fa-solid fa-code"></i>
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
                         <h3>Branding</h3>
                         <p>"Hope to see you in Hufflepuff!" said the Friar. "My old house, you know."</p>
                     </article>
                     <article>
-                        <i class="fa-solid fa-wifi"></i>
+                        <i class="fa-solid fa-wifi" aria-hidden="true"></i>
                         <h3>Branding</h3>
                         <p>One by one, the ghosts floated away through the opposite wall.</p>
                     </article>
@@ -82,9 +89,9 @@
                             <input type="text" id="subject" placeholder="Branding ...">
                         </label>
                         <!--Meldingsfelt-->
-                        <label for="message">
+                        <label for="type-message">
                             Message
-                            <input id="type-message" type="text" id="message">
+                            <input id="type-message" type="text">
                         </label>
                         <input id="send-message" type="submit" value="Send message">
                     </form>
@@ -92,15 +99,15 @@
                         <h3>Contact information</h3>
                         <p>He took a left path and hit a dead end, a right, and hit another; forcing himself to stop, heart hammering, he performed the Four-Point Spell again, backtracked, and chose a path that would take him northwest.</p>
                         <span>
-                            <i class="fa-solid fa-location-pin"></i>
+                            <i class="fa-solid fa-location-pin" title="location"></i>
                             B R A Veien 4, 1757 Halden
                         </span>
                         <span>
-                            <i class="fa-solid fa-phone"></i>
+                            <i class="fa-solid fa-phone" title="phone"></i>
                             69 60 80 00
                         </span>
                         <span>
-                            <i class="fa-solid fa-envelope"></i>
+                            <i class="fa-solid fa-envelope" title="e-mail"></i>
                             <a href="mailto:postmottak@hiof.no">postmottak@hiof.no</a>
                         </span>
                     </article>
@@ -109,6 +116,7 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2047.1882765433884!2d11.350228376799008!3d59.129250227020435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f0d344246f%3A0x4e47f19c99b253b1!2zSMO4Z3Nrb2xlbiBpIMOYc3Rmb2xk!5e0!3m2!1sno!2sno!4v1700518407378!5m2!1sno!2sno" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </article>
                 </section>
+                <a href="#" class="back-to-top" aria-label="Scroll to the top of the page"><i class="fa-solid fa-arrow-up-long"></i></a>
             </main>
             <footer>
                 <span><a href="index.html"><img src="ressurser/logo1.png" alt="Logoen til nettstedet"></a></span>
