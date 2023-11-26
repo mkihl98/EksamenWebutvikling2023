@@ -47,7 +47,7 @@ body{
             }
 
             #image{
-                opacity: 0.5; /*Se kilde 5 i referanseliste*/
+                opacity: 0.5;
                 height: 500px;
             }
 
@@ -243,16 +243,23 @@ body{
                     max-height: 188.9px;
                 }
 
-                #video{
-                    display: block;
-                    /*Se kilde 3 i referanseliste*/
+                /*Se kilde nr. 5 i referanseliste*/
+                div{
+                    position: relative;
                     width: 100%;
-                    position: absolute;
-                    top: 200px;
-                    z-index: -1;
                     height: 400px;
-                    object-fit: cover; /*Se kilde 4 i referanseliste*/
-                    opacity: 0.5; /*Se kilde 5 i referanseliste*/
+                    background-color: rgba(255, 255, 255, 0.6);
+
+                    #video{
+                        display: block;
+                        /*Se kilde 3 i referanseliste*/
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        z-index: -1;
+                        height: 400px;
+                        object-fit: cover; /*Se kilde 4 i referanseliste*/
+                    }
                 }
 
                 #image{
@@ -261,6 +268,8 @@ body{
 
                 section{
                     flex-basis: 70%;
+                    position: absolute;
+                    top: 150px;
                 }
             }
 
@@ -358,7 +367,7 @@ body{
             }
 
             #image{
-                opacity: 0.5; /*Se kilde 5 i referanseliste*/
+                opacity: 0.5;
                 height: 500px;
             }
 
@@ -374,7 +383,6 @@ body{
         main{
             grid-area: main;
             margin: 1.5rem;
-            /*max-width: 1600px;*/
 
             #navigering{
                 h2{
@@ -618,7 +626,6 @@ body{
                 background-color: #ffffffa0;
                 display: flex;
                 flex-direction: column;
-                /*align-self: center;*/
                 margin: 4rem 3rem 3rem 3rem;
                 padding: 2.5rem;
                 max-width: 700px;
@@ -1019,7 +1026,7 @@ body{
     background-color: #fff;
 }
 
-/*Back to top-knapp. Se kilde nr. i referanselisten*/
+/*Back to top-knapp. Se kilde nr. 9 i referanselisten*/
 .back-to-top{
     position: fixed;
     bottom: 25px;

@@ -36,10 +36,12 @@
                     </ul>
                 </nav>
                 <!--Bakgrunnsvideo i header-området. Jeg lærte meg hvordan jeg legger inn autoplay muted videoer underveis i kursets obliger, og har brukt dette som inspirasjon her. Jeg valgte også å legge på loop, slik at videoen ikke stopper etter å ha spilt én gang. Kildene jeg brukte for å lære meg dette i obligen, var LMS-et til emnet, samt kilde nr. 1 i referanselisten-->
-                <video id="video" autoplay muted loop>
+                <div>
+                    <video id="video" autoplay muted loop>
                     <source src="ressurser/mountains.mp4" type="video/mp4">
                     Your browser does not support the embedded video.
-                </video>
+                    </video>
+                </div>
                 <img id="image" src="ressurser/header-640.jpg" alt=" "> <!--Bakgrunnsbildet i headeren tilfører ikke noen spesiell mening til nettstedet. Jeg anser derfor dette som pynt, og holder alt-teksten tom.-->
                 <!--Kilde til bildet (kilde 2 i referanselisten): Bildet er tatt av <a href="https://pixabay.com/no/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1841553">Pexels</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1841553">Pixabay</a>-->
                 <section>
@@ -53,37 +55,37 @@
                     <h2>Engaging subheading. What can you help your visitors with?</h2>
                     <p>"Okay," said Harry slowly. "But. . . are you saying Karkaroff put my name in the goblet? Because if he did, he's a really good actor. He seemed furious about it. He wanted to stop me from competing."</p>
                 </section>
-                <section id="about-our-company">
+                <section id="about-our-company" itemscope itemtype="https://schema.org/Article">
                     <article id="about-image">
-                        <img src="https://placehold.co/400x400" alt="Placeholder for bilde som representerer firmaet">
+                        <img itemprop="image" src="https://placehold.co/400x400" alt="Placeholder for bilde som representerer firmaet">
                     </article>
                     <article id="about-text">
-                        <h2>About Our Company</h2>
+                        <h2 itemprop="headline">About Our Company</h2>
                         <p>"Not Slytherin, eh?" said the small voice. "Are you sure? You could be great, you know, it's all here in your head, and Slytherin will help you on the way to greatness, no doubt about that -- no? Well, if you're sure -- better be GRYFFINDOR!"</p>
                         <a href="about.html">Read more about us</a>
                     </article>
                 </section>
                 <section id="services">
                     <h2>Our Services</h2>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Service">
                         <i class="fa-solid fa-users" aria-hidden="true"></i>
-                        <h3>Branding</h3>
-                        <p>A ghost wearing a ruff and tights had suddenly noticed the first years.</p>
+                        <h3 itemprop="name">Branding</h3>
+                        <p itemprop="description">A ghost wearing a ruff and tights had suddenly noticed the first years.</p>
                     </article>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Service">
                         <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
-                        <h3>Branding</h3>
-                        <p>"Great food, isn't it?" Ron muttered to Harry through the hangings.</p>
+                        <h3 itemprop="name">Branding</h3>
+                        <p itemprop="description">"Great food, isn't it?" Ron muttered to Harry through the hangings.</p>
                     </article>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Service">
                         <i class="fa-solid fa-code" aria-hidden="true"></i>
-                        <h3>Branding</h3>
-                        <p>"Hope to see you in Hufflepuff!" said the Friar. "My old house, you know."</p>
+                        <h3 itemprop="name">Branding</h3>
+                        <p itemprop="description">"Hope to see you in Hufflepuff!" said the Friar. "My old house, you know."</p>
                     </article>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Service">
                         <i class="fa-solid fa-wifi" aria-hidden="true"></i>
-                        <h3>Branding</h3>
-                        <p>One by one, the ghosts floated away through the opposite wall.</p>
+                        <h3 itemprop="name">Branding</h3>
+                        <p itemprop="description">One by one, the ghosts floated away through the opposite wall.</p>
                     </article>
                 </section>
                 <section id="newsletter">
@@ -93,6 +95,7 @@
                         <input type="submit" value="Sign me up!" id="sign-up">
                     </form>
                 </section>
+                <!--Se kilde nr. 9 i referanselista-->
                 <a href="#" class="back-to-top" aria-label="Scroll to the top of the page"><i class="fa-solid fa-arrow-up-long"></i></a>
             </main>
             <footer>

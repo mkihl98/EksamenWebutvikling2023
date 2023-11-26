@@ -21,7 +21,7 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <div id="grid-about">
+        <div id="grid-about" itemscope itemtype="https://schema.org/LocalBusiness">
             <header>
                 <nav>
                     <a href="#main-content" class="skip">Skip to main content</a>
@@ -39,7 +39,7 @@
                 <!--Kilde til bildet (kilde 2 i referanselisten): Bildet er tatt av <a href="https://pixabay.com/no/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1841553">Pexels</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1841553">Pixabay</a>-->
                 <section>
                     <h1>About Our Company</h1>
-                    <p id="name">Company name</p>
+                    <p id="name" itemprop="name">Company name</p>
                     <p id="info">"Should be right up your street, this one," said Moody, looking up at Harry and scratching his scarred and stubbly chin. "From what Dumbledore's said, you've managed to get through stuff like this plenty of times. Broke your way through a series of obstacles guarding the Sorcerers Stone in your first year, didn't you?" "We helped," Ron said quickly. "Me and Hermione helped." Moody grinned. "Well, help him practice for this one, and I'll be very surprised if he doesn't win," said Moody. "In the meantime .. . constant vigilance, Potter. Constant vigilance."</p>
                     <a class="btn" href="#contact">Get in touch with us</a>
                 </section>
@@ -47,25 +47,25 @@
             <main id="main-content">
                 <section id="services">
                     <h2>Our Services</h2>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Service">
                         <i class="fa-solid fa-users" aria-hidden="true"></i>
-                        <h3>Branding</h3>
-                        <p>A ghost wearing a ruff and tights had suddenly noticed the first years.</p>
+                        <h3 itemprop="name">Branding</h3>
+                        <p itemprop="description">A ghost wearing a ruff and tights had suddenly noticed the first years.</p>
                     </article>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Service">
                         <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
-                        <h3>Branding</h3>
-                        <p>"Great food, isn't it?" Ron muttered to Harry through the hangings.</p>
+                        <h3 itemprop="name">Branding</h3>
+                        <p itemprop="description">"Great food, isn't it?" Ron muttered to Harry through the hangings.</p>
                     </article>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Service">
                         <i class="fa-solid fa-code" aria-hidden="true"></i>
-                        <h3>Branding</h3>
-                        <p>"Hope to see you in Hufflepuff!" said the Friar. "My old house, you know."</p>
+                        <h3 itemprop="name">Branding</h3>
+                        <p itemprop="description">"Hope to see you in Hufflepuff!" said the Friar. "My old house, you know."</p>
                     </article>
-                    <article>
+                    <article itemscope itemtype="https://schema.org/Service">
                         <i class="fa-solid fa-wifi" aria-hidden="true"></i>
-                        <h3>Branding</h3>
-                        <p>One by one, the ghosts floated away through the opposite wall.</p>
+                        <h3 itemprop="name">Branding</h3>
+                        <p itemprop="description">One by one, the ghosts floated away through the opposite wall.</p>
                     </article>
                 </section>
                 <section id="clients">
@@ -98,15 +98,15 @@
                     <article id="contact-info">
                         <h3>Contact information</h3>
                         <p>He took a left path and hit a dead end, a right, and hit another; forcing himself to stop, heart hammering, he performed the Four-Point Spell again, backtracked, and chose a path that would take him northwest.</p>
-                        <span>
+                        <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
                             <i class="fa-solid fa-location-pin" title="location"></i>
                             B R A Veien 4, 1757 Halden
                         </span>
-                        <span>
+                        <span itemprop="telephone">
                             <i class="fa-solid fa-phone" title="phone"></i>
                             69 60 80 00
                         </span>
-                        <span>
+                        <span itemprop="email">
                             <i class="fa-solid fa-envelope" title="e-mail"></i>
                             <a href="mailto:postmottak@hiof.no">postmottak@hiof.no</a>
                         </span>
@@ -116,6 +116,7 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2047.1882765433884!2d11.350228376799008!3d59.129250227020435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f0d344246f%3A0x4e47f19c99b253b1!2zSMO4Z3Nrb2xlbiBpIMOYc3Rmb2xk!5e0!3m2!1sno!2sno!4v1700518407378!5m2!1sno!2sno" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </article>
                 </section>
+                <!--Se kilde nr. 9 i referanselista-->
                 <a href="#" class="back-to-top" aria-label="Scroll to the top of the page"><i class="fa-solid fa-arrow-up-long"></i></a>
             </main>
             <footer>
