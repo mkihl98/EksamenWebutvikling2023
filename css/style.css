@@ -189,10 +189,6 @@ body #grid-index main #newsletter form #sign-up {
   width: -moz-fit-content;
   width: fit-content;
 }
-body #grid-index main #newsletter form #sign-up:hover {
-  background-color: #252525;
-  color: #e6bd43;
-}
 body #grid-index footer {
   grid-area: footer;
 }
@@ -271,6 +267,10 @@ body #grid-index footer {
   }
   body #grid-index main #newsletter form label {
     font-size: 2.5rem;
+  }
+  body #grid-index main #newsletter form #sign-up:hover {
+    background-color: #252525;
+    color: #e6bd43;
   }
   body #grid-index footer {
     grid-column-start: 1;

@@ -210,11 +210,6 @@ body{
                         font-size: 1.2rem;
                         font-weight: 700;
                         width: fit-content;
-
-                        &:hover{
-                            background-color: #252525;
-                            color: #e6bd43;
-                        }
                     }
                 }
             }
@@ -319,6 +314,11 @@ body{
                     form{
                         label{
                             font-size: 2.5rem;
+                        }
+
+                        #sign-up:hover{
+                            background-color: #252525;
+                            color: #e6bd43;
                         }
                     }
                 }
